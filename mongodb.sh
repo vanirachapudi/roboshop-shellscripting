@@ -1,15 +1,16 @@
 #!/bin/bash
 
 ID=$(id -u)
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
 
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 echo "scripted started excuted in $TIMESTAMP" &>> $LOGFILE
 
-R="\e[31m"
-G="\e[32m"
-N="\e[0m"
+
 
 VALIDATE(){
     if [ $1 -ne 0 ]
